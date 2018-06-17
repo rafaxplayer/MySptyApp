@@ -1,0 +1,40 @@
+<div class="container">
+    <app-loading [data]="albums"></app-loading>
+    <div class="img-artist text-center">
+        <img [src]="artistImage" alt="">
+        <div class="info-artist">
+            <h2>{{artist?.name}}</h2>
+        </div>
+    </div>
+
+    <h3>Discografia :</h3>
+    <div class="card-columns">
+        <app-album [album]="album" *ngFor="let album of albums"></app-album>
+    </div>
+
+    <h3>Mejores Canciones :</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+
+                    <th scope="col">Album</th>
+                    <th scope="col">Tema</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Player</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of artistTopTracks; let i = index ">
+                    <th scope="row">{{i}}</th>
+                    <th><img class="track-image" [src]="track.album.images | noimage:2" alt=""></th>
+                    <td>{{track.name}}</td>
+                    <td>{{track.duration_ms | formattime}}</td>
+                    <td><iframe [src]=" track.uri | spotiwidgetdoom" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="container">
+    <app-loading [data]="albums"></app-loading>
+    <h3 *ngIf="albums?.length">{{albums?.length}} Resultados de {{term}}</h3>
+    <div class="card-columns">
+        <app-album [album]="album" *ngFor="let album of albums"></app-album>
+        <h3 style="color:white" *ngIf="!albums?.length">No hay resultados</h3>
+    </div>
+
+</div>

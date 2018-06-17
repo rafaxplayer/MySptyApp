@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="table-responsive">
+
+        <div class="img-album text-center">
+            <img [src]="album.images | noimage:0" alt="">
+            <div class="info-album">
+                <h2>{{album?.name}}</h2>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Tema</th>
+                    <th scope="col">Duración</th>
+                    <th scope="col">Player</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let track of tracks; let i = index ">
+                    <th scope="row">{{i}}</th>
+                    <td>{{track.name}}</td>
+                    <td>{{track.duration_ms | formattime}}</td>
+                    <td><iframe [src]=" track.uri | spotiwidgetdoom" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>

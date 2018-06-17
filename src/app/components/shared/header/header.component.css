@@ -1,0 +1,13 @@
+header {
+    background: #333;
+    border-bottom: 1px solid white;
+    min-height: 80px;
+}
+
+header h1 {
+    margin: 0;
+    line-height: 80px;
+    margin-left: 1rem;
+    color: aliceblue;
+    font-weight: 400
+}
