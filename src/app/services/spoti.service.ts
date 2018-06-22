@@ -15,7 +15,7 @@ export class SpotiService {
 
   getQuery(query:string){
     const headers = new HttpHeaders({
-      'Authorization':'Bearer BQAAHqsExZcwLLNDRwX4tsfcv_0ieDe4yu5BzwqPQ3AfBsPlsS0EduUFDMKB4if-UzhwzGWSXpJNnS-1u397bStzppZNOBDRSnfSNnvuEqAwpdqcZnwtSmzBrmtF9mqfABhDlMe1hGFPEMladIs06P5Kj9323PPFh1FUcQfW-hK8egL3GJxOEDry2y92LwRBJAhI9z7npgARtcfMIIq5Ht4xsFl2Yuwh8oAFCGgFSGXggPrArExTgvXHFJojZjdP4YD7uPR1'
+      'Authorization':'Bearer BQADjGE0OYlD1vq4eHsBvgmsf4QMnPBtNwJdZi8o9aHCfHHPpW206_HvQrB1F4U9zYcc-Hlt4o2BUw2iIbT6U-drIdyC6qtNgXdblZByOR5DJ0gSP29rF-pqidP-ArRar0dAcG5LZOfSZyu4kjyjOcdixkGsi3LFIrB3SMg4s3lu55vEP2cJ5r53J40DmgyhKWVqkGYtP22Q61kufxhiPh10B2raDdlFTBUh9jO07bdq_HpmBlahM3915VRiZodrTuQvvK43yM0whw'
     });
     return this.http.get(`https://api.spotify.com/v1/${query}`,{headers});
   }

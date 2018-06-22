@@ -12,3 +12,7 @@ body {
 .container {
     padding: 1.5rem;
 }
+
+.card-columns {
+    overflow: visible;
+}

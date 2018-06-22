@@ -7,7 +7,7 @@
             <a class="artist" (click)="goArtist(artist.id)" *ngFor="let artist of album.artists">{{artist.name}}</a>
         </div>
 
-        <p class="card-date"><i class="far fa-calendar-alt"></i> {{ album.release_date | date }}</p>
+        <p class="card-date"><i class="far fa-calendar-alt"></i> {{ album.release_date | date:'yy MM'}}</p>
 
         <a (click)="goAlbum(album.id)" class="btn btn-primary"><i class="far fa-play-circle"></i> Go play</a>
     </div>

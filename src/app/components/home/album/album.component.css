@@ -1,5 +1,12 @@
 .card {
     color: black;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.card:hover {
+    z-index: 99999;
+    transform: scale(1.1);
 }
 
 .card-title {
@@ -13,12 +20,16 @@
 }
 
 .card-date {
-    background-color: #c2cece;
+    background-color: #de0c20;
     background-size: contain;
     padding: .3rem .6rem;
     border-radius: 5px;
     font-size: .8rem;
     margin-bottom: .5rem;
+    position: absolute;
+    color: white;
+    top: 10px;
+    left: 5px;
 }
 
 .artists {
@@ -34,6 +45,11 @@
     color: grey !important;
     font-size: .8rem;
     padding: .5rem 0;
+}
+
+.artist:nth-child(n+2):before {
+    content: '/';
+    margin: 0 3px;
 }
 
 .artist:hover {

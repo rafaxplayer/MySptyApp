@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+//Animations
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //Routes
 import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
@@ -27,6 +30,8 @@ import { ArtistComponent } from './components/home/artist/artist.component';
 import { FormattimePipe } from './pipes/formattime.pipe';
 import { SpotiWidgetDoomPipe } from './pipes/spotiwidgetdom.pipe';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +49,8 @@ import { SpotiWidgetDoomPipe } from './pipes/spotiwidgetdom.pipe';
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule 
   ],
   providers: [SpotiService],
   bootstrap: [AppComponent]

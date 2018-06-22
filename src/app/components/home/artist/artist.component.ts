@@ -9,7 +9,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent implements OnInit {
-
   
   artist:any={};
   albums:any[]=[];
